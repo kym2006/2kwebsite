@@ -1,0 +1,134 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en" style="margin-top:48px">
+   <title>2K'20</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+   <style>
+      /* Chat containers */
+      .container {
+      border: 2px solid #dedede;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      }
+      /* Darker chat container */
+      .darker {
+      border-color: #ccc;
+      background-color: #ddd;
+      }
+      /* Clear floats */
+      .container::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
+      /* Style images */
+      .container img {
+      float: left;
+      max-width: 60px;
+      width: 100%;
+      margin-right: 20px;
+      border-radius: 50%;
+      }
+      /* Style the right image */
+      .container img.right {
+      float: right;
+      margin-left: 20px;
+      margin-right:0;
+      }
+      /* Style time text */
+      .time-right {
+      float: right;
+      color: #aaa;
+      }
+      /* Style time text */
+      .time-left {
+      float: left;
+      color: #999;
+      }
+   </style>
+   <body>
+      <!-- Navbar -->
+      <div class="w3-top">
+         <div class="w3-bar w3-black w3-card">
+            <a
+               class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+               href="javascript:void(0)"
+               onclick="myFunction()"
+               title="Toggle Navigation Menu"
+               ><i class="fa fa-bars"></i
+               ></a>
+            <a href="./" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a
+               href="./homework"
+               class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+               >HOMEWORK</a
+               >
+            <a href="#" 
+               class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+               >LOGS/EVENTS</a>      
+         </div>
+      </div>
+      <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+      <div
+         id="navDemo"      
+         class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+         style="margin-top:46px"
+         >
+         <a
+            href="./homework"
+            class="w3-bar-item w3-button w3-padding-large"
+            onclick="myFunction()"
+            >HOMEWORK</a
+            >
+         <a
+            href="./logs"
+            class="w3-bar-item w3-button w3-padding-large"
+            onclick="myFunction()"
+            >LOGS/EVENTS</a
+            >
+      </div>
+      <!--     <link
+         id="favicon"
+         rel="icon"
+         href="https://glitch.com/edit/favicon-app.ico"
+         type="image/x-icon"
+         /> -->
+      <!-- import the webpage's stylesheet -->
+      <!--     <link rel="stylesheet" href="/style.css" /> -->
+      </head>
+      <div class="w3-container w3-margin">
+         <div class="w3-content w3-align-left" style="max-width:100vw">
+            <%- stuff %>
+         </div>
+      </div>
+      <form class="w3-align-left w3-padding-large" style="margin-top:46px; margin-bottom:20px;" action='/message' method="POST">
+         <input class="w3-input w3-animate-input w3-border" type="text" style="width:150px" placeholder="Type a message:" id="message" name="message">
+         <br />
+         <button class="w3-round-large" type="submit">Send</button>
+      </form>
+      <script>
+         // Used to toggle the menu on small screens when clicking on the menu button
+           function myFunction() {
+             let x = document.getElementById("navDemo");
+             if (x.className.indexOf("w3-show") == -1) {
+               x.className += " w3-show";
+             } else {
+               x.className = x.className.replace(" w3-show", "");
+             }
+           }
+         window.onload = function() {
+           window.scrollTo(0,document.body.scrollHeight);
+         }
+      </script>
+   </body>
+</html>

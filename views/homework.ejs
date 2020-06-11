@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>2K'20</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    .mySlides {
+      display: none;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="./" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >HOMEWORK</a
+        >
+        <a href="./logs" 
+           class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+           >LOGS/EVENTS</a
+          >
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top:46px"
+    >
+      <a
+        href="#"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >HOMEWORK</a
+      >
+      <a
+        href="./logs"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >LOGS/EVENTS</a
+      >
+    </div>
+    <div>
+      
+    
+<!--     <a
+      href="https://docs.google.com/spreadsheets/d/163W73HGFlGXJlDj7bTQp5VJ3TUUNVGcOfEdt-6lNSpY/edit?ts=5e9d9b4f#gid=0"
+      >Homework</a
+    > -->
+    </div>
+    <iframe src="https://docs.google.com/spreadsheets/d/163W73HGFlGXJlDj7bTQp5VJ3TUUNVGcOfEdt-6lNSpY/htmlembed/sheet?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; height:100vh; margin-top:50px" ></iframe>
+<!--     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTXZ02nIigzjChvzqsBcU1C5bkMmnExD1lTFwLBZFqLobn4gG0msZ_zN20GyS4IgYsw0obtig1K5OBR/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" ></iframe> -->
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        let x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+      }    
+
+// When the user clicks anywhere outside of the modal, close it
+// let modal = document.getElementById("ticketModal");
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
+    </script>
+  </body>
+</html>
